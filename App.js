@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {
-  Alert,
-  useState,
   TextInput,
   View,
   StyleSheet,
@@ -12,7 +10,6 @@ import {
 export default class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: '',
       password: '',
@@ -36,7 +33,10 @@ export default class App extends Component {
     }
     if (reg.test(email) === true && password == confirmPassword) {
       alert(
-        'Your password is: ' + this.state.email + ' ' + this.state.password,
+        'Your password is: ' +
+          this.state.email +
+          ' and password is ' +
+          this.state.password,
       );
     }
   }
